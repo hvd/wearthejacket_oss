@@ -1,0 +1,10 @@
+import urllib2
+import ast
+from query_engine import query_engine
+from decision_engine import decision_engine
+
+qe = query_engine()
+pos = qe.get_latitude_and_longitude_from_ip(<give_some_valid_ip_here>)
+weather_report = qe.get_weather_report(pos)
+de = decision_engine()
+de.get_decision(weather_report)
